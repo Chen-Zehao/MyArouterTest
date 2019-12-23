@@ -28,6 +28,8 @@ public abstract class BaseActivity extends Activity {
         setContentView(getLayoutId());
         //注册butterknife
         ButterKnife.bind(this);
+        //使用inject方法来初始化@Autowired注解的字段
+        ARouter.getInstance().inject(this);
         initLayoutParams();
         initData();
     }

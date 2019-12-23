@@ -29,18 +29,14 @@ public class LoginActivity extends BaseActivity {
 
     @Override
     protected void initData() {
-        ARouter.getInstance().inject(this);
     }
 
+    /**
+     * Activity跳转，跳转到MainActivity
+     */
     @OnClick(R2.id.bt_login)
     void btnLoginClicked() {
         ARouter.getInstance().build(Constance.ACTIVITY_URL_MAIN).navigation();
     }
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        // TODO: add setContentView(...) invocation
-        ButterKnife.bind(this);
-    }
 }
