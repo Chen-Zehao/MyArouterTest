@@ -1,0 +1,2 @@
+include ':app', ':libbase', ':login', ':main'
+rootProject.name='MyRouterTest'
